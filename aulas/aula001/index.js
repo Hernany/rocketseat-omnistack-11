@@ -2,6 +2,9 @@ const express = require('express');
 
 const app = express();
 
+//Informa ao Express que iremos trabalhar com formato json
+app.use(express.json());
+
 var objResponse = {
     event: 'Omnistack Week 11.0',
     student: 'Hernany Santos'
@@ -34,6 +37,19 @@ app.get('/users/:id', (request, response) => {
         aluno: 'Hernany Santos'
     });
 });
+
+app.post('/users', (request, response) => {
+    const params = request.body;
+    
+    console.log(body);
+
+    return response.json({
+        evento: 'Semana OmniStack 11.00',
+        aluno: 'Hernany Santos'
+    });
+});
+
+
 
 
 app.listen(3333);
