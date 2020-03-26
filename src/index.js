@@ -4,6 +4,7 @@ const routes = require('./routes');
 
 const app = express();
 
+//Permissão de quem poderá acessar a aplicação
 app.use(cors());
 
 //Informa ao Express que será trabalhado com respostas em json
